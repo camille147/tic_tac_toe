@@ -36,7 +36,7 @@ int gagnant(char plateau[3][3], char joueur)
 {
 	for (int i = 0; i<3; i=i+1)
 	{
-		if (plateau[i][0] == joueur && plateau[i][1] == joueur && plateau[i][2])
+		if (plateau[i][0] == joueur && plateau[i][1] == joueur && plateau[i][2]==joueur)
 		{
 			return 1;
 		}
@@ -87,6 +87,7 @@ void JoueurHumainTour(char plateau[3][3], char joueur)
 	}
 	plateau[casechoisi / 3][casechoisi % 3]=joueur;
 }
+
 void JoueurOrdinateurTour(char plateau[3][3], char joueur)
 {
 	printf("l'ordinateur est en train de jouer\n");
@@ -94,10 +95,12 @@ void JoueurOrdinateurTour(char plateau[3][3], char joueur)
 	{
 		for (int j=0; j<3; j++)
 		{
-			if (plateau[i][j]=joueur);
+			if (plateau[i][j]==' ')
 			{
+				plateau[i][j]=joueur;
 				return;
 			}
+		printf("hola\n");
 		}
 	}
 }
